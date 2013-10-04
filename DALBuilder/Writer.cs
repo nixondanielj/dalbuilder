@@ -82,7 +82,7 @@ namespace DALBuilder
             foreach (var table in dbModel.Tables.Where(t => !t.JoinOnly))
             {
                 var primaryKeyColumn = table.PrimaryKey;
-                Add(string.Format("public class {0}Repository:Repository<{0}>", table.ModelName));
+                Add(string.Format("public partial class {0}Repository:Repository<{0}>", table.ModelName));
                 Open();
                 AddConstructor(table, primaryKeyColumn);
                 AddCreateMethods(table);
