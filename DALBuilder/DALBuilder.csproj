@@ -40,6 +40,9 @@
     <Reference Include="Extensions">
       <HintPath>lib\Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -56,9 +59,14 @@
     <Compile Include="ColumnModel.cs" />
     <Compile Include="DAL.cs" />
     <Compile Include="DataBaseModel.cs" />
+    <Compile Include="Interface\Concrete\DefaultInputService.cs" />
+    <Compile Include="Interface\Concrete\DefaultLogService.cs" />
+    <Compile Include="Interface\IInputService.cs" />
+    <Compile Include="Interface\ILogService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableModel.cs" />
+    <Compile Include="Worker.cs" />
     <Compile Include="Writer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DBModel\" />
     <Folder Include="lib\" />
+    <Folder Include="Render\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
