@@ -59,6 +59,15 @@
     <Compile Include="ColumnModel.cs" />
     <Compile Include="DAL.cs" />
     <Compile Include="DataBaseModel.cs" />
+    <Compile Include="DBModel\Concrete\DefaultDBModelBuilder.cs" />
+    <Compile Include="DBModel\Concrete\SQLServerQueryService.cs" />
+    <Compile Include="DBModel\IQueryService.cs" />
+    <Compile Include="DBModel\Models\Column.cs" />
+    <Compile Include="DBModel\Models\Database.cs" />
+    <Compile Include="DBModel\IDBModelBuilder.cs" />
+    <Compile Include="DBModel\Models\DbObject.cs" />
+    <Compile Include="DBModel\Models\Relationship.cs" />
+    <Compile Include="DBModel\Models\Table.cs" />
     <Compile Include="Interface\Concrete\DefaultInputService.cs" />
     <Compile Include="Interface\Concrete\DefaultLogService.cs" />
     <Compile Include="Interface\IInputService.cs" />
@@ -77,7 +86,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DBModel\" />
     <Folder Include="lib\" />
     <Folder Include="Render\" />
   </ItemGroup>
