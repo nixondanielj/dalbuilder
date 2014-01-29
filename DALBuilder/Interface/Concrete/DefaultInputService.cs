@@ -26,7 +26,7 @@ namespace DALBuilder.Interface.Concrete
             return response == 'y';
         }
 
-        string GetConnString()
+        public string GetSQLServerConnString()
         {
             string format = "Server={0}; Database={1}; ";
             Console.WriteLine("I will now ask some questions to help me understand how to connect to your database.");

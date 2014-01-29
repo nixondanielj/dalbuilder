@@ -9,10 +9,12 @@ namespace DALBuilder.DBModel
 {
     interface IQueryService
     {
-        List<Table> GetRawTables();
+        void PopulateRawTables(Database db);
 
         void PopulateColumns(Table model);
 
         Column GetPrimaryColumn(Table table);
+
+
     }
 }

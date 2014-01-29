@@ -8,10 +8,10 @@ namespace DALBuilder.Interface
 {
     interface IInputService
     {
-        public string Prompt(string message);
+        string Prompt(string message);
 
-        public bool PromptForBool(string message);
+        bool PromptForBool(string message);
 
-        public string GetConnString();
+        string GetSQLServerConnString();
     }
 }
