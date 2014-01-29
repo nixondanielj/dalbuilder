@@ -16,7 +16,7 @@ namespace DALBuilder.DBModel.Concrete
         {
             this.InputService = iservice;
         }
-        public DatabaseModel Build()
+        public Database Build()
         {
             throw new NotImplementedException();
         }

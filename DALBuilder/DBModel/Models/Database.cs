@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DALBuilder.DBModel.Models
 {
-    class DatabaseModel
+    class Database
     {
     }
 }

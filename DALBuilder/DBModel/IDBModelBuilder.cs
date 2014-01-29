@@ -10,6 +10,6 @@ namespace DALBuilder.DBModel
 {
     interface IDBModelBuilder
     {
-        DatabaseModel Build();
+        Database Build();
     }
 }
