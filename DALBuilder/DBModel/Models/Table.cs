@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DALBuilder.DBModel.Models
 {
-    class Database : DbObject
+    class Table : DbObject
     {
-        public HashSet<Table> Tables { get; set; }
+        public HashSet<Column> Columns { get; set; }
+        public HashSet<Relationship> Relationships { get; set; }
     }
 }
