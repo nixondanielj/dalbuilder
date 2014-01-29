@@ -8,7 +8,7 @@ namespace DALBuilder.DBModel.Models
 {
     class DbObject
     {
-        public string ObjectId { get; set; }
+        public int ObjectId { get; set; }
         public string Name { get; set; }
 
         public override string ToString()

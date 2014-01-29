@@ -21,10 +21,18 @@ namespace DALBuilder.DBModel.Concrete
 
         public void PopulateRawTables(Database db)
         {
-            var tables = new List<Table>();
             using (var cmd = GetCommand("SELECT * FROM sys.tables"))
             {
-
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var table = new Table();
+                        table.Name = reader["name"].ToString();
+                        table.ObjectId = Convert.ToInt32(reader["object_id"]);
+                        db.Tables.Add(table);
+                    }
+                }
             }
         }
 
