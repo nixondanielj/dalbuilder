@@ -57,6 +57,7 @@ namespace DALBuilder.Interface.Concrete
         public void LogExchange(string call, string response)
         {
             Log[call] = response;
+            SaveLog();
         }
 
         public string GetPriorResponse(string call)
